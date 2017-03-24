@@ -1,4 +1,4 @@
-FROM maprtech/pacc:5.2.0_2.0_centos7
+FROM maprtech/pacc:5.2.0_2.0_ubuntu14
 
 # Create a directory for your MapR Application and copy the Application
 RUN mkdir -p /usr/share/mapr-apps/
