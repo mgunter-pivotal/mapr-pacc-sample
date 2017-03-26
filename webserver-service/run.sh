@@ -15,4 +15,5 @@ fi
 #sudo mkdir -p $LOG_DIR
 #sudo chmod -R 777 $LOG_DIR
 
-java -cp $MAPR_CLASSPATH:/usr/share/mapr-apps/webserver-service.jar com.mapr.demos.WebServer /apps/sensors:computer $LOG_DIR
+java -cp $MAPR_CLASSPATH:/usr/share/mapr-apps/webserver-service.jar com.mapr.demos.WebServer $1 $LOG_DIR
+#java -cp $MAPR_CLASSPATH:/usr/share/mapr-apps/webserver-service.jar com.mapr.demos.WebServer /apps/sensors:computer $LOG_DIR
