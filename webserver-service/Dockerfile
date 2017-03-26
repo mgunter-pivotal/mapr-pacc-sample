@@ -1,6 +1,6 @@
 FROM maprtech/pacc:5.2.0_2.0_ubuntu14
 
-EXPOSE $PORT
+EXPOSE 8080
 
 # Create a directory for your MapR Application and copy the Application
 RUN mkdir -p /usr/share/mapr-apps/
