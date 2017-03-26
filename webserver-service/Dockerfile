@@ -7,6 +7,8 @@ RUN mkdir -p /usr/share/mapr-apps/
 COPY ./target/webserver-service-1.0-SNAPSHOT-jar-with-dependencies.jar /usr/share/mapr-apps/webserver-service.jar
 COPY run.sh /usr/share/mapr-apps/run.sh
 RUN chmod +x /usr/share/mapr-apps/run.sh
+COPY run.sh /usr/share/mapr-apps/run2.sh
+RUN chmod +x /usr/share/mapr-apps/run2.sh
 RUN apt-get install -y software-properties-common python-software-properties
 RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
