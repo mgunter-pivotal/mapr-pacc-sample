@@ -10,6 +10,6 @@ RUN chmod +x /usr/share/mapr-apps/run.sh
 RUN apt-get install -y software-properties-common python-software-properties
 RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
-RUN apt-get install openjdk-8-jre
+RUN apt-get install -y openjdk-8-jre
 
  #CMD ["start", "/usr/share/mapr-apps/run.sh", "/apps/sensors:computer" , "/apps/logs/"]
