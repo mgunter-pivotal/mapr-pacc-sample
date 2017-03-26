@@ -19,4 +19,4 @@ RUN mkdir /usr/share/mapr-apps/apps/logs
 RUN chmod 777 /usr/share/mapr-apps/apps/logs
 
 
-#CMD ["start", "/usr/share/mapr-apps/run.sh", "/apps/sensors:computer" , "apps/logs/"]
+CMD ["start", "/usr/share/mapr-apps/run2.sh", "/apps/sensors:computer" , "apps/logs/"]
