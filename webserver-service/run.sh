@@ -8,7 +8,7 @@ DIR=$MAPR_MOUNT_PATH/$MAPR_CLUSTER
 if [ -d "$DIR" ]; then
     LOG_DIR=$DIR/$2
 else
-    LOG_DIR=apps/log
+    LOG_DIR=apps/logs
 fi
 
 # Create Log dir and set permission for Read/Write
