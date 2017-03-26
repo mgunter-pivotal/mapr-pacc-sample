@@ -11,5 +11,9 @@ RUN apt-get install -y software-properties-common python-software-properties
 RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
 RUN apt-get install -y openjdk-8-jre
+RUN rm /usr/bin/java
+RUN ln -s /usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java /usr/bin/java
+
+
 
  #CMD ["start", "/usr/share/mapr-apps/run.sh", "/apps/sensors:computer" , "/apps/logs/"]
