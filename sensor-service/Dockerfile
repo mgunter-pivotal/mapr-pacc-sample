@@ -8,3 +8,4 @@ RUN chmod +x /usr/share/mapr-apps/run.sh
 RUN apt-get install jq
 
 #CMD ["start", "/usr/share/mapr-apps/run.sh", "/apps/sensors:computer"]
+CMD ["start", "ping", "localhost"]
