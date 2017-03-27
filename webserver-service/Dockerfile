@@ -15,10 +15,11 @@ RUN apt-get update
 RUN apt-get install -y openjdk-8-jre
 RUN rm /usr/bin/java
 RUN ln -s /usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/java /usr/bin/java
-RUN mkdir /usr/share/mapr-apps/apps
-RUN chmod 777 /usr/share/mapr-apps/apps
-RUN mkdir /usr/share/mapr-apps/apps/logs
-RUN chmod 777 /usr/share/mapr-apps/apps/logs
+#RUN mkdir /usr/share/mapr-apps/apps
+#RUN chmod 777 /usr/share/mapr-apps/apps
+#RUN mkdir /usr/share/mapr-apps/apps/logs
+#RUN chmod 777 /usr/share/mapr-apps/apps/logs
 
 
-CMD ["start", "/usr/share/mapr-apps/run.sh", "/apps/sensors:computer" , "apps/logs/"]
+#CMD ["start", "/usr/share/mapr-apps/run.sh", "/apps/sensors:computer" , "apps/logs/"]
+CMD ["start", "ping", "localhost"]
