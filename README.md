@@ -52,19 +52,20 @@ $ docker run -it --privileged --cap-add SYS_ADMIN --cap-add SYS_RESOURCE --devic
 ```
 
 Access the Web application in the host using http://localhost:8080
-
+```
 ---------PCF steps
-f push sensor-stream -o mgunter/mapr-sensor-producer --no-start -u none -k 2G -m 1G 
-cf set-env sensor-stream MAPR_CLDB_HOSTS 10.0.0.100
-cf set-env sensor-stream MAPR_CLUSTER 10.0.0.100
-cf set-env sensor-stream MAPR_CONTAINER_USER mapr
+$ cf push sensor-stream -o mgunter/mapr-sensor-producer --no-start -u none -k 2G -m 1G 
+$ cf set-env sensor-stream MAPR_CLDB_HOSTS 10.0.0.100
+$ cf set-env sensor-stream MAPR_CLUSTER 10.0.0.100
+$ cf set-env sensor-stream MAPR_CONTAINER_USER mapr
 
-cf push web-stream -o mgunter/mapr-web-consumer --no-start -u none -k 2G -m 1G 
-cf set-env web-stream MAPR_CLDB_HOSTS 10.0.0.100
-cf set-env web-stream MAPR_CLUSTER 10.0.0.100
-cf set-env web-stream MAPR_CONTAINER_USER mapr
-cf apps
+$ cf push web-stream -o mgunter/mapr-web-consumer --no-start -u none -k 2G -m 1G 
+$ cf set-env web-stream MAPR_CLDB_HOSTS 10.0.0.100
+$ cf set-env web-stream MAPR_CLUSTER 10.0.0.100
+$ cf set-env web-stream MAPR_CONTAINER_USER mapr
+$ cf apps
 
 (until we can auto-execute the start cmd..start the apps manually)
-cf ssh into sensor-stream and run /usr/share/mapr-apps/run.sh
-cf ssh int web-stream and run  /usr/share/mapr-apps/run.sh  /apps/sensors:computer apps/logs
+$ cf ssh into sensor-stream  (and run /usr/share/mapr-apps/run.sh )
+$ cf ssh int web-stream  ( and run  /usr/share/mapr-apps/run.sh  /apps/sensors:computer apps/logs )
+```
